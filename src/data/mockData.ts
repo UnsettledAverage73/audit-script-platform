@@ -1,5 +1,5 @@
 
-import { AuditResult, CISBenchmark, OperatingSystem, TargetSystem, User } from "@/types";
+import { AuditResult, CISBenchmark, ComplianceStatus, OperatingSystem, TargetSystem, User } from "@/types";
 
 // Mock users
 export const mockUsers: User[] = [

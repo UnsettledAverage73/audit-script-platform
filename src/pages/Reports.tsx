@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DatePickerWithRange } from "@/components/DateRangePicker";
-import { Calendar, Download, FileDown, FilePdf, FileSpreadsheet, FileText, Filter, Search } from "lucide-react";
+import { Calendar, Download, FileDown, FileText, Filter, Search } from "lucide-react";
 import { auditResults, operatingSystems, targetSystems } from "@/data/mockData";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -44,7 +43,7 @@ const Reports = () => {
             {loading ? (
               <span className="h-4 w-4 rounded-full border-2 border-navy-600 border-t-transparent animate-spin"></span>
             ) : (
-              <FilePdf className="h-4 w-4" />
+              <FileText className="h-4 w-4" />
             )}
             PDF
           </Button>
@@ -58,7 +57,7 @@ const Reports = () => {
             {loading ? (
               <span className="h-4 w-4 rounded-full border-2 border-navy-600 border-t-transparent animate-spin"></span>
             ) : (
-              <FileSpreadsheet className="h-4 w-4" />
+              <FileText className="h-4 w-4" />
             )}
             CSV
           </Button>
@@ -257,11 +256,7 @@ const Reports = () => {
                           ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400" 
                           : "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
                       }`}>
-                        {report.format === "PDF" ? (
-                          <FilePdf className="h-5 w-5" />
-                        ) : (
-                          <FileSpreadsheet className="h-5 w-5" />
-                        )}
+                        <FileText className="h-5 w-5" />
                       </div>
                       <div>
                         <p className="font-medium">{report.name}</p>

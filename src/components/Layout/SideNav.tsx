@@ -48,7 +48,7 @@ const NavItem = ({
       href={external ? href : undefined}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
-      className={({ isActive }: { isActive: boolean }) =>
+      className={({ isActive }) =>
         cn(
           "group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-navy-800",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
