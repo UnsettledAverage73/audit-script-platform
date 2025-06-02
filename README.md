@@ -106,4 +106,3 @@ A: Drop `.sh` (Linux) or `.ps1` (Windows) files in `backend/scripts/[os]/`.
 ## 🔗 Links
 - [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks)  
 - [Vercel Deployment Guide](https://vercel.com/docs)  
-```
