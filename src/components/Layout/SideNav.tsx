@@ -48,15 +48,16 @@ const NavItem = ({
       href={external ? href : undefined}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
-      className={({ isActive }) =>
-        cn(
-          "group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-navy-800",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
-          disabled && "pointer-events-none opacity-60",
-          isActive
-            ? "bg-navy-700 text-white"
-            : "text-gray-200 hover:text-white"
-        )
+      className={external ? "group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-navy-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 text-gray-200 hover:text-white" : 
+        (props) =>
+          cn(
+            "group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-navy-800",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+            disabled && "pointer-events-none opacity-60",
+            props.isActive
+              ? "bg-navy-700 text-white"
+              : "text-gray-200 hover:text-white"
+          )
       }
     >
       <div className="mr-2 h-5 w-5">{icon}</div>
