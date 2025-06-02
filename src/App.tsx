@@ -8,6 +8,7 @@ import { AuthProvider } from "@/context/AuthContext";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Audit from "./pages/Audit";
+import Systems from "./pages/Systems";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
 import DashboardLayout from "./components/Layout/DashboardLayout";
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/" element={<Dashboard />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/audit" element={<Audit />} />
+              <Route path="/systems" element={<Systems />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="/settings" element={<Settings />} />
               {/* Add more routes as needed */}
